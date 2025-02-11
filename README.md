@@ -1,6 +1,6 @@
 # FPT Assignment - Room Booking App
 
-A React Native mobile application for room booking built with Expo.
+A React Native mobile application for room booking built with Expo, for assigmment 
 
 ## Prerequisites
 
@@ -67,7 +67,6 @@ The coverage report will be generated in the `coverage` directory. You can view 
 - `bun start` - Start the Expo development server
 - `bun ios` - Run on iOS simulator
 - `bun android` - Run on Android emulator
-- `bun web` - Run in web browser
 - `bun test` - Run Jest tests once
 - `bun test:watch` - Run Jest tests in watch mode
 - `bun test:coverage` - Run tests with coverage report
