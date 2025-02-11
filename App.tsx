@@ -7,8 +7,12 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, View } from "react-native";
 import { getStatusBarHeight } from "./src/utils/statusBar";
+import { useNetwork } from "./src/hooks/useNetwork";
 
 export default function App() {
+  // Initialize network monitoring
+  useNetwork();
+
   return (
     <View style={{ flex: 1 }}>
       <StatusBar style="auto" backgroundColor="transparent" />
