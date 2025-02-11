@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1739292983750" clover="3.2.0">
+  <project timestamp="1739292983750" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4" elements="20" coveredelements="20" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
+    <file name="useDateTimeSelection.ts" path="/Users/khanhlequoc/Work/React-native/Personal/assignment/fpt-assignment/src/screens/RoomList/hooks/useDateTimeSelection.ts">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="9" type="stmt"/>
+      <line num="12" count="8" type="stmt"/>
+      <line num="13" count="8" type="stmt"/>
+      <line num="14" count="8" type="stmt"/>
+      <line num="17" count="9" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="20" count="4" type="stmt"/>
+      <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="4" type="stmt"/>
+      <line num="25" count="9" type="stmt"/>
+      <line num="26" count="3" type="stmt"/>
+      <line num="29" count="9" type="stmt"/>
+    </file>
+  </project>
+</coverage>

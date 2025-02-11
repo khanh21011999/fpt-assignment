@@ -1,50 +1,112 @@
-# Welcome to your Expo app 👋
+# FPT Assignment - Room Booking App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application for room booking built with Expo.
 
-## Get started
+## Prerequisites
 
-1. Install dependencies
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- [Bun](https://bun.sh/) package manager
+- [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/) (for iOS development)
+- [Android Studio and Android SDK](https://docs.expo.dev/workflow/android-studio-emulator/) (for Android development)
+- [Expo Go](https://expo.dev/client) (for running on physical devices)
 
-   ```bash
-   npm install
-   ```
+## Setup Instructions
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+1. Clone the repository:
 
 ```bash
-npm run reset-project
+git clone <repository-url>
+cd fpt-assignment
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
 
-## Learn more
+```bash
+bun install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start the development server:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+bun start
+```
 
-## Join the community
+4. Run on your preferred platform:
 
-Join our community of developers creating universal apps.
+- For iOS:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+bun ios
+```
+
+- For Android:
+
+```bash
+bun android
+```
+
+## Running Tests
+
+This project uses Jest for testing. There are several ways to run the tests:
+
+```bash
+# Run tests once
+bun test
+
+# Run tests in watch mode (recommended during development)
+bun test:watch
+
+# Run tests with coverage report
+bun test:coverage
+```
+
+The coverage report will be generated in the `coverage` directory. You can view the detailed HTML report by opening `coverage/lcov-report/index.html` in your browser.
+
+## Available Scripts
+
+- `bun start` - Start the Expo development server
+- `bun ios` - Run on iOS simulator
+- `bun android` - Run on Android emulator
+- `bun web` - Run in web browser
+- `bun test` - Run Jest tests once
+- `bun test:watch` - Run Jest tests in watch mode
+- `bun test:coverage` - Run tests with coverage report
+- `bun lint` - Run ESLint
+- `bun reset-project` - Reset the project state
+
+## Project Structure
+
+```
+src/
+├── api/          # API client and configuration
+├── components/   # Reusable components
+├── navigation/   # Navigation configuration
+├── screens/      # Screen components
+├── theme/        # Theme configuration
+├── types/        # TypeScript type definitions
+└── utils/        # Utility functions
+```
+
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Clear Metro bundler cache:
+
+```bash
+bun start --clear
+```
+
+2. Reset the project:
+
+```bash
+bun reset-project
+```
+
+3. Clean install dependencies:
+
+```bash
+rm -rf node_modules
+rm bun.lock
+bun install
+```
