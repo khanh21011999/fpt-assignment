@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   headerTitle: {
-    fontSize: sizes.fontLg,
+    fontSize: sizes.fontXl,
     fontWeight: "600",
     flex: 1,
     textAlign: "center",
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   bottomButton: {
     margin: sizes.md,
     padding: sizes.md,
-    borderRadius: sizes.radiusMd,
+    borderRadius: sizes.radiusFull,
     alignItems: "center",
     alignSelf: "center",
     width: "90%",
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   urlContainer: {
     padding: sizes.md,
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
+
     marginHorizontal: sizes.md,
     marginVertical: sizes.sm,
     borderRadius: sizes.radiusSm,

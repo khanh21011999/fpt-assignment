@@ -126,12 +126,17 @@ export default function QRScannerScreen({ navigation }: Props) {
   }
 
   return (
-    <View style={[styles.container, { backgroundColor: "#000" }]}>
+    <View
+      style={[
+        styles.container,
+        { backgroundColor: colorStyles.backgroundPrimary.backgroundColor },
+      ]}
+    >
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}
       >
-        <Feather name="arrow-left" size={24} color={colors.background} />
+        <Feather name="arrow-left" size={24} color={colors.textPrimary} />
       </TouchableOpacity>
 
       <CameraView
@@ -143,7 +148,7 @@ export default function QRScannerScreen({ navigation }: Props) {
         }}
       />
       <View style={styles.overlay}>
-        <Text style={[styles.overlayText, { color: colors.background }]}>
+        <Text style={[styles.overlayText, { color: colors.textPrimary }]}>
           Scan QR Code
         </Text>
       </View>
@@ -161,12 +166,12 @@ const styles = StyleSheet.create({
     left: sizes.md,
     zIndex: 1,
     padding: sizes.xs,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+
     borderRadius: sizes.radiusFull,
   },
   overlay: {
     position: "absolute",
-    top: "40%",
+    top: "20%",
     left: 0,
     right: 0,
     alignItems: "center",

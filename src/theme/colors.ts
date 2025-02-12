@@ -5,7 +5,7 @@ export const colors = {
     background: "#FFFFFF",
     card: "#F5F5F5",
     textPrimary: "#333333",
-    textSecondary: "#C0C5CD",
+    textSecondary: "#666666",
     textAccent: "#5975E0",
     available: "#4CAF50",
     unavailable: "#A0A0A0",

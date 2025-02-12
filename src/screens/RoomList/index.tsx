@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { Platform, SafeAreaView, StyleSheet } from "react-native";
 import { getColors, getColorStyles } from "@theme/index";
 import { RoomListScreenProps } from "./types";
 import { RoomListContent } from "./components";
@@ -45,7 +45,7 @@ export default function RoomListScreen({ navigation }: RoomListScreenProps) {
   const statusBarHeight = getStatusBarHeight();
 
   return (
-    <View
+    <SafeAreaView
       style={[
         styles.container,
         { paddingTop: Platform.OS === "android" ? statusBarHeight : 0 },
@@ -72,7 +72,7 @@ export default function RoomListScreen({ navigation }: RoomListScreenProps) {
         onReset={handleSortReset}
         currentSortOption={currentSortOption}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

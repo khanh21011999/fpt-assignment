@@ -1,25 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
+import {
+  Appearance,
+  StatusBar,
+  SafeAreaView,
+  View,
+  useColorScheme,
+} from "react-native";
+import { colors } from "@theme/colors";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { AppNavigator } from "@navigation/AppNavigator";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, View } from "react-native";
+import { getStatusBarHeight } from "@utils/statusBar";
 import { useNetwork } from "@hooks/useNetwork";
 
 export default function App() {
   // Initialize network monitoring
   useNetwork();
 
+  const scheme = useColorScheme();
+  const themeColors = colors[scheme === "dark" ? "dark" : "light"];
+
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar style="auto" backgroundColor="transparent" />
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <NavigationContainer>
-            <AppNavigator />
-          </NavigationContainer>
-        </SafeAreaView>
+        <StatusBar
+          animated
+          backgroundColor={themeColors.background}
+          barStyle={scheme === "dark" ? "light-content" : "dark-content"}
+        />
+        <NavigationContainer>
+          <AppNavigator />
+        </NavigationContainer>
       </GestureHandlerRootView>
     </View>
   );
