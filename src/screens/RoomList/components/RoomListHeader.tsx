@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { getColorStyles, getColors } from "../../../theme";
+import { getColorStyles, getColors } from "@theme/index";
 import { RoomSortHeader } from "./RoomSortHeader";
 import { DateTimeSelector } from "./DateTimeSelector";
 import { BookingHeader } from "./BookingHeader";

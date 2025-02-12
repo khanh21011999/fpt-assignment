@@ -1,8 +1,8 @@
 import React from "react";
 import { FlatList, ActivityIndicator, StyleSheet } from "react-native";
 import { Room } from "../types";
-import { sizes, getColors, getColorStyles } from "../../../theme";
-import { RoomCard } from "../../../components/RoomCard";
+import { sizes, getColors, getColorStyles } from "@theme/index";
+import { RoomCard } from "@components/RoomCard";
 import { RoomListHeader } from "./RoomListHeader";
 
 interface RoomListContentProps {
@@ -31,7 +31,6 @@ export function RoomListContent({
           level={item.level}
           capacity={item.capacity}
           isAvailable={item.isAvailable}
-          onPress={() => console.log("Room selected:", item.name)}
         />
       )}
       ListHeaderComponent={<RoomListHeader {...headerProps} />}

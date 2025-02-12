@@ -7,7 +7,7 @@ import {
   useColorScheme,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { getColorStyles, getColors, sizes } from "../../../theme";
+import { getColorStyles, getColors, sizes } from "@theme/index";
 import { Appearance } from "react-native";
 
 interface BookingHeaderProps {

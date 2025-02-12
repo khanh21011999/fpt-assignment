@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Room, ApiRoom } from "../types";
-import { fetchRoomAvailability } from "../../../api/client";
+import { fetchRoomAvailability } from "@api/client";
 
 interface UseRoomDataResult {
   rooms: Room[];

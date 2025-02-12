@@ -6,8 +6,7 @@ import {
   StyleSheet,
   useColorScheme,
 } from "react-native";
-import { sizes } from "../../../theme";
-import { getColors, getColorStyles } from "../../../theme";
+import { sizes, getColors, getColorStyles } from "@theme/index";
 import DatePicker from "react-native-date-picker";
 
 interface DateTimeSelectorProps {

@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { sizes } from "../../../theme";
-import { getColors, getColorStyles } from "../../../theme";
+import { sizes, getColors, getColorStyles } from "@theme/index";
 
 interface RoomSortHeaderProps {
   onCameraPress: () => void;

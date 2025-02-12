@@ -5,7 +5,7 @@ import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
-import { getColors } from "../../../theme";
+import { getColors } from "@theme/index";
 
 interface SortBottomSheetProps {
   onClose: () => void;

@@ -1,14 +1,13 @@
 import React, { useRef, useState } from "react";
 import { Platform, StyleSheet, View } from "react-native";
-import { getColors, getColorStyles } from "../../theme";
+import { getColors, getColorStyles } from "@theme/index";
 import { RoomListScreenProps } from "./types";
 import { RoomListContent } from "./components";
 import { useDateTimeSelection } from "./hooks/useDateTimeSelection";
 import { useRoomData } from "./hooks/useRoomData";
 import { SortBottomSheet } from "./components/SortBottomSheet";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { StatusBar } from "expo-status-bar";
-import { getStatusBarHeight } from "@/src/utils/statusBar";
+import { getStatusBarHeight } from "@utils/statusBar";
 export default function RoomListScreen({ navigation }: RoomListScreenProps) {
   const bottomSheetRef = useRef<BottomSheet>(null);
   const [isSortSheetOpen, setIsSortSheetOpen] = useState(false);

@@ -25,7 +25,7 @@ export const fetchRoomAvailability = async (): Promise<ApiRoom[]> => {
     const response = await apiClient.get<ApiRoom[]>(
       API_CONFIG.ROOM_AVAILABILITY_URL
     );
-    console.log("API Response Data:", JSON.stringify(response.data, null, 2));
+
     if (!Array.isArray(response.data)) {
       throw new Error("Invalid API response format: expected an array");
     }

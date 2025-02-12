@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { getColorStyles, getColors, sizes } from "../theme";
+import { getColorStyles, getColors, sizes } from "@theme/index";
 
 interface RoomCardProps {
   name: string;
@@ -52,16 +52,14 @@ export function RoomCard({
   level,
   capacity,
   isAvailable,
-  onPress,
 }: RoomCardProps) {
   const colors = getColors();
   const colorStyles = getColorStyles(colors);
   const statusText = isAvailable ? "Available" : "Not Available";
 
   return (
-    <TouchableOpacity
+    <View
       style={[styles.container, colorStyles.backgroundCard]}
-      onPress={onPress}
       testID="room-card"
     >
       <View style={styles.content}>
@@ -85,6 +83,6 @@ export function RoomCard({
           </Text>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }

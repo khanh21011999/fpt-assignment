@@ -13,8 +13,7 @@ import { WebView } from "react-native-webview";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../types/navigation";
 import { getColors, getColorStyles, sizes } from "../../theme";
-import { getStatusBarHeight } from "@/src/utils/statusBar";
-
+import { getStatusBarHeight } from "@utils/statusBar";
 type Props = NativeStackScreenProps<RootStackParamList, "BookingResult">;
 
 export default function BookingResultScreen({ route, navigation }: Props) {
