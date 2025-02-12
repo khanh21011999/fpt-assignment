@@ -4,6 +4,7 @@ import { Room } from "../types";
 import { sizes, getColors, getColorStyles } from "@theme/index";
 import { RoomCard } from "@components/RoomCard";
 import { RoomListHeader } from "./RoomListHeader";
+import { EmptyState } from "./EmptyState";
 
 interface RoomListContentProps {
   rooms: Room[];
@@ -34,8 +35,12 @@ export function RoomListContent({
         />
       )}
       ListHeaderComponent={<RoomListHeader {...headerProps} />}
-      ListFooterComponent={
-        isLoading ? <ActivityIndicator style={styles.loadingIndicator} /> : null
+      ListEmptyComponent={
+        isLoading ? (
+          <ActivityIndicator style={styles.loadingIndicator} />
+        ) : (
+          <EmptyState />
+        )
       }
     />
   );

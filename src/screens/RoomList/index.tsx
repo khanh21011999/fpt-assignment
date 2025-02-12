@@ -45,13 +45,7 @@ export default function RoomListScreen({ navigation }: RoomListScreenProps) {
   const statusBarHeight = getStatusBarHeight();
 
   return (
-    <SafeAreaView
-      style={[
-        styles.container,
-        { paddingTop: Platform.OS === "android" ? statusBarHeight : 0 },
-        colorStyles.backgroundPrimary,
-      ]}
-    >
+    <SafeAreaView style={[styles.container, colorStyles.backgroundPrimary]}>
       <RoomListContent
         rooms={rooms}
         isLoading={isLoading}
