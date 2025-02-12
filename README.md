@@ -109,3 +109,10 @@ rm -rf node_modules
 rm bun.lock
 bun install
 ```
+## Future Plans
+
+- **Code Quality:** Implement ESLint and Prettier for consistent code style and error detection.
+- **Internationalization:** Add support for multiple languages through translation.
+- **Component Architecture:** Refactor components to be smaller, more modular, and better organized for maintainability and reusability.
+- **User Experience:** Enhance user experience by adding animations for smoother transitions and interactions.
+- **Feature Enhancement:** Improve and expand upon existing functionality.
