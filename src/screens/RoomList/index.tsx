@@ -11,7 +11,7 @@ import { getStatusBarHeight } from "@utils/statusBar";
 export default function RoomListScreen({ navigation }: RoomListScreenProps) {
   const bottomSheetRef = useRef<BottomSheet>(null);
   const [isSortSheetOpen, setIsSortSheetOpen] = useState(false);
-  const [currentSortOption, setCurrentSortOption] = useState<string>("");
+  const [currentSortOption, setCurrentSortOption] = useState<string>("Level");
   const colors = getColors();
   const colorStyles = getColorStyles(colors);
 

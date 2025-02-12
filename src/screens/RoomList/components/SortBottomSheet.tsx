@@ -19,8 +19,9 @@ export const SortBottomSheet = React.forwardRef<
   SortBottomSheetProps
 >(({ onClose, onApply, onReset, currentSortOption }, ref) => {
   const colors = getColors();
-  const [selectedOption, setSelectedOption] =
-    React.useState<string>(currentSortOption);
+  const [selectedOption, setSelectedOption] = React.useState<string>(
+    currentSortOption || "Level"
+  );
 
   // Update selected option when currentSortOption changes
   React.useEffect(() => {
@@ -56,8 +57,8 @@ export const SortBottomSheet = React.forwardRef<
   };
 
   const handleReset = () => {
-    setSelectedOption("");
     onReset();
+    setSelectedOption("");
     onClose();
   };
 

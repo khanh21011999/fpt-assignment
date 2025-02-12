@@ -30,12 +30,12 @@ export const useRoomData = (selectedDateTime: Date): UseRoomDataResult => {
 
   const handleSortRooms = (sortOption?: string) => {
     setRooms((prevRooms) => {
-      if (!sortOption) return prevRooms;
+      const sortingOption = sortOption?.toLowerCase() || "level";
 
       return [...prevRooms].sort((a, b) => {
-        switch (sortOption.toLowerCase()) {
+        switch (sortingOption) {
           case "level":
-            return parseInt(b.level) - parseInt(a.level);
+            return parseInt(a.level) - parseInt(b.level);
           case "capacity":
             return parseInt(b.capacity) - parseInt(a.capacity);
           case "availability":
@@ -54,6 +54,7 @@ export const useRoomData = (selectedDateTime: Date): UseRoomDataResult => {
         const response = await fetchRoomAvailability();
         const transformedRooms = transformApiData(response);
         setRooms(transformedRooms);
+        handleSortRooms(); // Apply default sorting by level
         setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to fetch rooms");
