@@ -5,11 +5,10 @@ A React Native mobile application for room booking built with Expo, for assigmme
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or later recommended)
-- [Bun](https://bun.sh/) package manager
+- Package manager (e.g., [npm](https://www.npmjs.com/), [yarn](https://yarnpkg.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/)). Bun is recommended for its speed and efficiency.
 - [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/) (for iOS development)
 - [Android Studio and Android SDK](https://docs.expo.dev/workflow/android-studio-emulator/) (for Android development)
 - [Expo Go](https://expo.dev/client) (for running on physical devices)
-
 
 ## Screenshots
 
