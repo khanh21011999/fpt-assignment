@@ -66,7 +66,8 @@ export const SortBottomSheet = React.forwardRef<
     return (
       <TouchableOpacity
         key={option}
-        style={[styles.optionContainer, { borderColor: colors.textSecondary }]}
+        activeOpacity={0.8}
+        style={[styles.optionContainer]}
         onPress={() => handleOptionPress(option)}
       >
         <Text
@@ -154,7 +155,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingVertical: 16,
-    borderBottomWidth: 1,
   },
   optionText: {
     fontSize: 16,

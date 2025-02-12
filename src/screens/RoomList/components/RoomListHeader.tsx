@@ -35,7 +35,7 @@ export function RoomListHeader({
         formatDate={formatDate}
         formatTime={formatTime}
       />
-      <RoomSortHeader onCameraPress={onCameraPress} onSortPress={onSortPress} />
+      <RoomSortHeader onSortPress={onSortPress} />
     </View>
   );
 }

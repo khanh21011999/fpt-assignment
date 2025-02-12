@@ -4,7 +4,6 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { sizes, getColors, getColorStyles } from "@theme/index";
 
 interface RoomSortHeaderProps {
-  onCameraPress: () => void;
   onSortPress: () => void;
 }
 

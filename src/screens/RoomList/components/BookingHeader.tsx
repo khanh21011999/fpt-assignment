@@ -38,7 +38,7 @@ export function BookingHeader({ onCameraPress }: BookingHeaderProps) {
       </View>
       <TouchableOpacity style={styles.iconButton} onPress={onCameraPress}>
         <Ionicons
-          name="camera-outline"
+          name="qr-code-outline"
           size={sizes.xxl}
           color={colors.textPrimary}
         />
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: sizes.lg,
+    marginTop: sizes.md,
+    marginBottom: sizes.xl,
     paddingHorizontal: sizes.md,
   },
   titleContainer: {
@@ -60,11 +61,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: sizes.fontMd,
-    fontWeight: "bold",
+    fontSize: sizes.fontXl,
+    fontWeight: "700",
   },
   iconButton: {
-    width: 40,
+    width: sizes.xxl * 1.5,
+    height: sizes.xxl * 1.5,
     alignItems: "center",
     justifyContent: "center",
   },

@@ -126,7 +126,7 @@ export default function QRScannerScreen({ navigation }: Props) {
   }
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: "#000" }]}>
+    <View style={[styles.container, { backgroundColor: "#000" }]}>
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}
@@ -147,7 +147,7 @@ export default function QRScannerScreen({ navigation }: Props) {
           Scan QR Code
         </Text>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 

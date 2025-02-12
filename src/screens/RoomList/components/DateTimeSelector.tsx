@@ -6,6 +6,7 @@ import {
   StyleSheet,
   useColorScheme,
 } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import { sizes, getColors, getColorStyles } from "@theme/index";
 import DatePicker from "react-native-date-picker";
 
@@ -56,14 +57,27 @@ export function DateTimeSelector({
     onDateTimeChange(newDateTime);
   };
 
+  const containerStyle = [styles.container];
+
   return (
-    <View style={styles.container}>
+    <View style={containerStyle}>
       <View style={styles.sectionContainer}>
         <Text style={[styles.label, colorStyles.textSecondary]}>Date</Text>
-        <Pressable onPress={() => setIsDatePickerOpen(true)}>
+        <Pressable
+          onPress={() => setIsDatePickerOpen(true)}
+          style={styles.valueContainer}
+        >
           <Text style={[styles.value, colorStyles.textPrimary]}>
             {formatDate(selectedDateTime)}
           </Text>
+          <View style={[styles.iconContainer, colorStyles.backgroundCard]}>
+            <Feather
+              name="edit-2"
+              size={14}
+              color={colors.unavailable}
+              style={[styles.icon]}
+            />
+          </View>
         </Pressable>
         <View
           style={[
@@ -75,10 +89,21 @@ export function DateTimeSelector({
 
       <View style={styles.sectionContainer}>
         <Text style={[styles.label, colorStyles.textSecondary]}>Time</Text>
-        <Pressable onPress={() => setIsTimePickerOpen(true)}>
+        <Pressable
+          onPress={() => setIsTimePickerOpen(true)}
+          style={styles.valueContainer}
+        >
           <Text style={[styles.value, colorStyles.textPrimary]}>
             {formatTime(selectedDateTime)}
           </Text>
+          <View style={[styles.iconContainer, colorStyles.backgroundCard]}>
+            <Feather
+              name="edit-2"
+              size={14}
+              color={colors.unavailable}
+              style={[styles.icon]}
+            />
+          </View>
         </Pressable>
         <View
           style={[
@@ -116,20 +141,42 @@ export function DateTimeSelector({
 }
 
 const styles = StyleSheet.create({
+  valueContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  iconContainer: {
+    marginLeft: sizes.xs,
+
+    borderRadius: 12,
+    padding: sizes.xxs,
+    width: 24,
+    height: 24,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  icon: {},
   container: {
     marginBottom: sizes.lg,
+    borderRadius: sizes.radiusMd,
+    padding: sizes.md,
   },
   sectionContainer: {
-    marginBottom: sizes.md,
+    marginBottom: sizes.lg,
   },
   label: {
-    fontSize: sizes.fontXs,
+    fontSize: sizes.fontSm,
+    marginBottom: sizes.xs,
+    opacity: 0.7,
   },
   value: {
-    fontSize: sizes.fontSm,
+    fontSize: sizes.fontLg,
+    fontWeight: "600",
+    marginTop: sizes.xxs,
   },
   divider: {
     height: 1,
-    marginTop: sizes.xs,
+    marginTop: sizes.sm,
+    opacity: 0.2,
   },
 });
