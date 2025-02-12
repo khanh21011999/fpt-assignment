@@ -10,6 +10,16 @@ A React Native mobile application for room booking built with Expo, for assigmme
 - [Android Studio and Android SDK](https://docs.expo.dev/workflow/android-studio-emulator/) (for Android development)
 - [Expo Go](https://expo.dev/client) (for running on physical devices)
 
+
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/12929e30-1924-4db0-9784-47cc38f6084b" alt="Screenshot 1" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/1deb734f-9ca6-4b10-9da2-4b5f10a64b3a" alt="Screenshot 2" width="300"></td>
+  </tr>
+</table>
+
 ## Setup Instructions
 
 1. Clone the repository:
