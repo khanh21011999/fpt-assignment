@@ -80,8 +80,6 @@ The coverage report will be generated in the `coverage` directory. You can view 
 - `bun test` - Run Jest tests once
 - `bun test:watch` - Run Jest tests in watch mode
 - `bun test:coverage` - Run tests with coverage report
-- `bun lint` - Run ESLint
-- `bun reset-project` - Reset the project state
 
 ## Project Structure
 
@@ -105,13 +103,6 @@ If you encounter any issues:
 ```bash
 bun start --clear
 ```
-
-2. Reset the project:
-
-```bash
-bun reset-project
-```
-
 3. Clean install dependencies:
 
 ```bash
