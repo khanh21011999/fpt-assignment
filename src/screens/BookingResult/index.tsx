@@ -8,7 +8,6 @@ import {
   ActivityIndicator,
   Platform,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { WebView } from "react-native-webview";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../types/navigation";
@@ -30,18 +29,8 @@ export default function BookingResultScreen({ route, navigation }: Props) {
         }}
       >
         <View style={styles.header}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("RoomList")}
-            style={styles.backButton}
-          >
-            <Ionicons
-              name="chevron-back"
-              size={24}
-              color={colors.textPrimary}
-            />
-          </TouchableOpacity>
           <Text style={[styles.headerTitle, colorStyles.textPrimary]}>
-            Book a Room
+            Booking Result
           </Text>
         </View>
 
@@ -89,18 +78,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: sizes.md,
     height: sizes.xl * 2.3,
     position: "relative",
-  },
-  backButton: {
-    padding: sizes.xs,
-    marginRight: sizes.xs,
-    position: "absolute",
-    left: sizes.xs,
-    zIndex: 1,
+    justifyContent: "center",
   },
   headerTitle: {
     fontSize: sizes.fontXl,
-    fontWeight: "600",
-    flex: 1,
+    fontWeight: "700",
     textAlign: "center",
   },
   content: {
